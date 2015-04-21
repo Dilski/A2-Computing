@@ -1,0 +1,29 @@
+<?php
+
+   $check = mysql_query( "SELECT * FROM userDetails (`forename`, `surname`, `dob`, `phoneNumber`, `email`, `employed`, `notes`, `streetAddress1`, `streetAddress2`, `town`, `postcode`) WHERE id = '$viewId'", $connection); 
+			    if (!$check)
+			        $error.= mysql_error(); 
+			        
+	$row = mysql_fetch_assoc($check);
+    
+    //$username
+    $forename = $row['forename'];
+    $surname = $row['surname'];
+    $dob = $row['dob'];
+    $phone = $row['phoneNumber'];
+    $employed = $row['employed'];
+    $email = $row['email'];
+    $notes = $row['notes'];
+    $address1 = $row['streetAddress1'];
+    $address2 = $row['streetAddress2'];
+    $town = $row['town'];
+    $postcode = $row['postcode'];
+    //group
+    //viewid
+    
+    
+    
+    
+    
+    
+        
